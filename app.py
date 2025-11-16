@@ -40,7 +40,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Load local image and encode to Base64
-with open("/Users/shaktiswry/PycharmProjects/fyp 4/kl.jpg", "rb") as f:
+with open("kl.jpg", "rb") as f:
     img_bytes = f.read()
 b64_img = base64.b64encode(img_bytes).decode()
 
