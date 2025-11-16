@@ -332,7 +332,7 @@ with tab1:
 with tab2:
     fig = px.scatter(filtered_similar_properties, x="size_sqft", y="price", opacity=0.6,
                      title=f"Size vs Price for Similar Properties ({location})",
-                     labels={"size_sqft": "Size (sqft)", "price": "Price (RM)"})  # Removed trendline="ols"
+                     labels={"size_sqft": "Size (sqft)", "price": "Price (RM)"})
     # Add user's input as a highlighted point
     fig.add_trace(go.Scatter(x=[size], y=[predicted_price], mode="markers",
                              marker=dict(size=12, color="red", symbol="star"),
