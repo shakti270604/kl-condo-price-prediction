@@ -5,6 +5,7 @@ import joblib
 import plotly.express as px
 import base64
 import plotly.graph_objects as go
+pip install statsmodels
 # Apply Custom Page Style (Styling)
 st.markdown("""
     <style>
