@@ -331,7 +331,6 @@ with tab1:
 # Tab 2: Size vs Price Chart (UPDATED: Use filtered similar properties, add user point)
 with tab2:
     fig = px.scatter(filtered_similar_properties, x="size_sqft", y="price", opacity=0.6,
-                     trendline="ols",
                      title=f"Size vs Price for Similar Properties ({location})",
                      labels={"size_sqft": "Size (sqft)", "price": "Price (RM)"})
     # NEW: Add user's input as a highlighted point
