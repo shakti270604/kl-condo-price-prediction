@@ -327,7 +327,16 @@ with tab1:
     fig.add_hline(y=predicted_price, line_dash="dash", line_color="blue", annotation_text="Your Predicted Price")
     st.plotly_chart(fig, use_container_width=True)
 
-
+# Tab 2: Size vs Price Chart (UPDATED: Use filtered similar properties, add user point)
+with tab2:
+    fig = px.scatter(filtered_similar_properties, x="size_sqft", y="price", opacity=0.6,
+                     title=f"Size vs Price for Similar Properties ({location})",
+                     labels={"size_sqft": "Size (sqft)", "price": "Price (RM)"})
+    # NEW: Add user's input as a highlighted point
+    fig.add_trace(go.Scatter(x=[size], y=[predicted_price], mode="markers",
+                             marker=dict(size=12, color="red", symbol="star"),
+                             name="Your Property"))
+    st.plotly_chart(fig, use_container_width=True)
 # Tab 3: Feature Importance Chart (UNCHANGED, but added context)
 with tab3:
     if hasattr(model, "feature_importances_"):
