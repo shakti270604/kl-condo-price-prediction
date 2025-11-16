@@ -1,6 +1,6 @@
 streamlit~=1.51.0
 pandas~=2.3.3
-numpy~=1.26.4
+numpy
 joblib~=1.5.2
 plotly~=6.4.0
 gdown~=5.2.0
