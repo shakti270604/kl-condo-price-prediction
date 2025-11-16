@@ -351,8 +351,6 @@ with tab2:
     )
 
     st.plotly_chart(fig, use_container_width=True)
-# Display the chart
-st.plotly_chart(fig, use_container_width=True)
 
 # Tab 3: Feature Importance Chart (UNCHANGED, but added context)
 with tab3:
