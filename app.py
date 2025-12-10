@@ -270,9 +270,10 @@ with col2:
     st.metric("Actual Price (RM)", f"{actual_price:,.2f}")
 
     if actual_price < predicted_price:
-        st.success("✅ **Good Deal!** This property is *under-valued* relative to similar units.")
+        st.success("✅ This property appears to be *undervalued* compared to similar units and could be a good investment opportunity.
+.")
     else:
-        st.error("❗ **Not Recommended.** This property is *over-valued* compared to market trends.")
+        st.error("❗This property appears to be *overvalued* compared to similar units and may not be an ideal investment at the current price.")
 
     # NEW: Summary Insights based on filtered data
     st.markdown("---")
