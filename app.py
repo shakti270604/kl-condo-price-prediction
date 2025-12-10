@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6, p, label {{
 st.set_page_config(page_title="KL Property Price Predictor", page_icon="🏙️", layout="wide")
 
 st.title("🏙️ Kuala Lumpur Condominium Price Intelligence Dashboard")
-st.write("Estimate fair market pricing and assess investment viability.")
+st.write("This tool helps you estimate the fair market price of a condominium in Kuala Lumpur. Just enter the property details below, and the system will instantly predict the price and tell you whether the listing is a good deal or overpriced.")
 
 # ==============================
 # LOAD MODEL & COLUMNS
@@ -187,7 +187,7 @@ data = data.dropna(subset=["lat", "lon"])
 # INPUT FORM (LEFT COLUMN)
 # ==============================
 st.markdown("### 🏠 Enter Property Details")
-st.markdown("This tool helps you estimate the fair market price of a condominium in Kuala Lumpur. Just enter the property details below, and the system will instantly predict the price and tell you whether the listing is a good deal or overpriced.")
+st.markdown("Use the form below to describe the property you're evaluating")
 st.markdown("---")
 
 with st.container():
