@@ -187,7 +187,7 @@ data = data.dropna(subset=["lat", "lon"])
 # INPUT FORM (LEFT COLUMN)
 # ==============================
 st.markdown("### 🏠 Enter Property Details")
-st.markdown("Use the form below to describe the property you're evaluating.")
+st.markdown("This tool helps you estimate the fair market price of a condominium in Kuala Lumpur. Just enter the property details below, and the system will instantly predict the price and tell you whether the listing is a good deal or overpriced.")
 st.markdown("---")
 
 with st.container():
@@ -269,7 +269,7 @@ with col2:
     st.metric("Predicted Price (RM)", f"{predicted_price:,.2f}")
     st.metric("Actual Price (RM)", f"{actual_price:,.2f}")
 
-    if predicted_price < actual_price:
+    if actual_price < predicted_price:
         st.success("✅ **Good Deal!** This property is *under-valued* relative to similar units.")
     else:
         st.error("❗ **Not Recommended.** This property is *over-valued* compared to market trends.")
