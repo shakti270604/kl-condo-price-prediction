@@ -1,5 +1,5 @@
 # ============================================================
-# STEP 11: MODEL TRAINING, HYPERPARAMETER OPTIMIZATION & EVALUATION (FINAL)
+# STEP 10: MODEL TRAINING, HYPERPARAMETER OPTIMIZATION & EVALUATION (FINAL)
 # ============================================================
 
 import pandas as pd
