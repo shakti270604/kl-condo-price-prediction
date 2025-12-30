@@ -12,25 +12,6 @@ print("\nLocation counts:")
 print(df["location_clean"].value_counts())
 
 # ============================================================
-# STEP 4: STANDARDIZE TEXT VALUES (e.g., merge 'klcc' and 'KLCC')
-# ============================================================
-
-# Identify all object (categorical) columns
-categorical_cols = df.select_dtypes(include=['object']).columns
-print("🧾 Categorical columns found:", list(categorical_cols))
-
-# 1️⃣ Convert all text values to uppercase and strip whitespace
-for col in categorical_cols:
-    df[col] = df[col].astype(str).str.upper().str.strip()
-
-print("\n✅ All categorical text columns standardized to uppercase.")
-
-# 2️⃣ Verify the fix worked for 'location_clean'
-if "location_clean" in df.columns:
-    print("\n📍 Unique locations after standardization:")
-    print(sorted(df["location_clean"].unique()))
-
-# ============================================================
 # STEP 1: DATA CLEANING — INSPECTION
 # ============================================================
 from IPython.display import display
