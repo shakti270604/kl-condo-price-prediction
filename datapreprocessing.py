@@ -164,7 +164,7 @@ plt.show()
 print("\n✅ Outlier cleaning complete.")
 
 # ============================================================
-# STEP 7: ENCODING CATEGORICAL VARIABLES — ONE-HOT ENCODING
+# STEP 6: ENCODING CATEGORICAL VARIABLES — ONE-HOT ENCODING
 # ============================================================
 
 # 1️⃣ Identify categorical columns
@@ -186,7 +186,7 @@ added_features = df_encoded.shape[1] - df.shape[1]
 print(f"\n🧮 Added {added_features} new columns after encoding.")
 
 # ============================================================
-# STEP 8: FEATURE SCALING — STANDARDIZATION
+# STEP 7: FEATURE SCALING — STANDARDIZATION
 # ============================================================
 
 from sklearn.preprocessing import StandardScaler
@@ -218,7 +218,7 @@ print("\nStandard deviation (≈1):")
 print(df_scaled[features_to_scale].std().round(2).head())
 
 # ============================================================
-# STEP 9: TRAIN-TEST SPLIT + K-FOLD SETUP
+# STEP 8: TRAIN-TEST SPLIT + K-FOLD SETUP
 # ============================================================
 
 from sklearn.model_selection import train_test_split, KFold
@@ -247,7 +247,7 @@ print(f"Unscaled: {X_train_unscaled.shape} train, {X_test_unscaled.shape} test")
 print(f"Scaled:   {X_train_scaled.shape} train, {X_test_scaled.shape} test")
 
 # ============================================================
-# STEP 10: SAVE PREPROCESSED DATASETS
+# STEP 9: SAVE PREPROCESSED DATASETS
 # ============================================================
 
 # --- Unscaled ---
